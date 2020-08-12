@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # build monero-core dependencies
-cd ./external/monero-core/ && 
+cd ./external/equilibria/ && 
 make release-static -j8 &&
 
 # build libmonero-cpp shared library

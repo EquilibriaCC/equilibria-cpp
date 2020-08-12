@@ -4,7 +4,7 @@
 git submodule update --init --recursive
 
 # update monero-core
-cd ./external/monero-core
-git checkout tags/v0.16.0.1
-git pull --ff-only origin tags/v0.16.0.1
+cd ./external/equilibria
+git checkout tags/v6.0.3
+git pull --ff-only origin tags/v6.0.3
 cd ../../

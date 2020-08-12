@@ -1,13 +1,12 @@
-# Monero C++ Library
+# Equilibria C++ Library
 
-A C++ library for creating Monero applications using native bindings to [monero v0.16.0.1 'Nitrogen Nebula'](https://github.com/monero-project/monero/tree/v0.16.0.1).
+A C++ library for creating Equilibria applications using native bindings to [equilibria v6.0.3 'Nitrogen Nebula'](https://github.com/EquilibriaCC/equilibria/tree/v6.0.3).
 
-* Supports fully client-side wallets by wrapping [wallet2.h](https://github.com/monero-project/monero/blob/master/src/wallet/wallet2.h).
+* Supports fully client-side wallets by wrapping [wallet2.h](https://github.com/EquilibriaCC/equilibria/blob/master/src/wallet/wallet2.h).
 * Supports multisig, view-only, and offline wallets.
 * Uses a clearly defined [data model and API specification](https://moneroecosystem.org/monero-java/monero-spec.pdf) intended to be intuitive and robust.
 * Query wallet transactions, transfers, and outputs by their properties.
 * Receive notifications when wallets sync, send, or receive.
-* Tested by over 100 tests in [monero-java](https://github.com/monero-ecosystem/monero-java) and [monero-javascript](https://github.com/monero-ecosystem/monero-javascript) using JNI and WebAssembly bindings.
 
 ## Table of contents
 
@@ -159,7 +158,7 @@ wallet_random->close(true);
 
 This project may be compiled as part of another application or built as a shared or static library.
 
-For example, [monero-java](https://github.com/monero-ecosystem/monero-java) compiles this project to a shared library to support Java JNI bindings, while [monero-javascript](https://github.com/monero-ecosystem/monero-javascript) compiles this project to WebAssembly binaries.
+For example, [monero-java](https://github.com/monero-ecosystem/monero-java) compiles this project to a shared library to support Java JNI bindings, while [equilibria-javascript](https://github.com/EquilibriaCC/equilibria-javascript) compiles this project to WebAssembly binaries.
 
 1. Set up dependencies
 	1. Set up Boost
@@ -182,15 +181,13 @@ For example, [monero-java](https://github.com/monero-ecosystem/monero-java) comp
 		1. Build libsodium for your system.
 		2. Copy libsodium.a to ./external-libs/libsodium.<br>
        Mac: installed through homebrew at /usr/local/Cellar/libsodium/1.0.17/lib/libsodium.a
-	5. Set up monero-project/monero:
+	5. Set up EquilibriaCC/equilibria:
 		1. Update submodules: `./bin/update_submodules.sh`
-		2. `cd ./external/monero-core`
+		2. `cd ./external/equilibria`
 		3. Modify CMakeLists.txt: `option(BUILD_GUI_DEPS "Build GUI dependencies." ON)`
 		4. Run twice to create libwallet_merged.a in addition to other .a libraries: `make release-static -j8`
 2. Link to this library's source files in your application or build as a shared library in `./build/`: `./bin/build_libmonero_cpp.sh`
        
-These build steps aspire to be automated further.  [Any help is greatly appreciated](https://github.com/monero-ecosystem/monero-cpp/issues/1).
-
 ## Developer guide
 
 Please refer to [monero-javascript's developer guide](https://github.com/monero-ecosystem/monero-javascript#developer-guide) which mostly translates to this C++ library.
