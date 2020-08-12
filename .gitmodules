@@ -1,3 +1,4 @@
 [submodule "external/equilibria"]
 	path = external/equilibria
-	url = https://github.com/EquilibriaCC/equilibria
+	url = https://github.com/EquilibriaCC/equilibria/
+	branch = master

@@ -13,10 +13,10 @@ set(BUILD_SAMPLE ON)
 set(BUILD_SCRATCHPAD ON)
 
 ###################
-# monero-project
+# equilibria
 ###################
 
-set(MONERO_CORE "${CMAKE_SOURCE_DIR}/external/monero-core")
+set(MONERO_CORE "${CMAKE_SOURCE_DIR}/external/equilibria")
 set(MONERO_CORE_SRC "${MONERO_CORE}/src")
 
 # header includes
